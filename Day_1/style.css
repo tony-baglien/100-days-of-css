@@ -1,0 +1,15 @@
+body{
+    background: #25A9FC;
+}
+.frame{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-bottom: -200px;
+    width: 400px;
+    height:400px;
+
+    background: white;
+    border: solid 4px red;
+}
