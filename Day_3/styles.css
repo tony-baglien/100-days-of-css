@@ -1,0 +1,143 @@
+#container{
+    position: absolute;
+    height: 25em;
+    width:25em;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background-color: #272c34;
+}
+
+#circle{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    height: 15em;
+    width: 15em;
+    border-radius: 50%;   
+}
+
+#cover{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #272c34;
+    z-index: 10;
+    animation: opener 5s ease infinite forwards;
+}
+
+#sun-wrapper{
+    position: absolute;
+    width: 3em;
+    height: 100%;
+    z-index: 6;
+    right: 40%;
+    transform-origin: bottom;
+    animation: sun-1 5s ease infinite forwards;
+}
+
+#sun{
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+    background-color: yellow;
+    position: absolute;
+    top: 0%;
+    transform-origin: bottom;
+    animation: sun-0 5s ease infinite forwards;
+}
+
+#pyramid #ground{
+    display: block;
+}
+
+#pyramid{
+position: relative;
+background-color: lightblue;
+height: 70%;
+}
+
+#side-one{
+    height:0px;
+    width: 0px;
+    border-right: 1.5em solid transparent;
+	border-bottom: 5em solid whitesmoke;
+    border-left: 5em solid transparent;
+    position: absolute;
+    bottom: 0%;
+    left: 17%;
+    z-index: 2;
+    animation: side-2-shadow 5s ease infinite forwards;
+
+}
+#side-two{
+    height:0px;
+    width: 0px;
+    border-right: 5em solid transparent;
+	border-bottom: 5em solid gainsboro;
+    border-left: 0em solid transparent;
+    position: absolute;
+    bottom: 0%;
+    right: 16.5%;
+    animation: side-1-shadow 5s ease infinite forwards;
+}
+
+#shadow{
+    height: 0px;
+    width: 0px;
+    border-right: 8em solid transparent;
+    border-top: 2.5em solid rgba(99, 111, 122,0.3);;
+    border-left: 2em solid transparent;
+    position:absolute;
+    transform-origin: top;
+    top: 0%;
+    left: 16.5%;
+    animation: shadow 5s ease infinite forwards;
+}
+
+#ground{
+height:30%;
+position: relative;
+background-color: #f0de75;
+}
+
+/* animations */
+
+
+@keyframes shadow{
+    0% {transform: skew(90deg)}
+    20% {transform: skew(75deg)}
+    40% {transform: skew(75deg)}
+    100%{transform: skew(-90deg)}
+}
+@keyframes sun-0{
+    0% {transform: translateY(0%)}
+    20% {transform: translateY(15%)}
+    40% {transform: translateY(15%)}
+    100%{transform: translateY(0%)}
+}
+@keyframes sun-1{
+    0% { transform: rotate(-90deg)}
+    20% {transform: rotate(-25deg)}
+    40% {transform: rotate(-25deg)}
+    100%{transform: rotate(90deg)}
+}
+@keyframes side-1-shadow{
+    0% {border-bottom: 5em solid gainsboro}
+    20% {border-bottom: 5em solid rgb(167, 164, 164)}
+    40% {border-bottom: 5em solid rgb(167, 164, 164)}
+    100%{border-bottom: 5em solid whitesmoke}
+}
+@keyframes side-2-shadow{
+    0% {border-bottom: 5em solid whitesmoke}
+    20% {border-bottom: 5em solid whitesmoke}
+    40% {border-bottom: 5em solid whitesmoke}
+    100%{border-bottom: 5em solid rgb(134, 134, 134)}
+}
+@keyframes opener{
+    0% {opacity: 100%}
+    20%,80% {opacity: 0%}
+    100% {opacity: 100%};
+}

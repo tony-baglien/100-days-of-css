@@ -1,0 +1,131 @@
+.main-container{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+.burger{
+    height: 25em;
+    width: 25em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #3FAF82;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line-container{
+    height: 5.3em;
+    width: 7em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+
+}
+.line{
+    height: .8em;
+    width: 100%;
+    margin: .4em 0em;
+    border-radius: 10px;
+    background: whitesmoke;
+}
+
+.line.box{
+    box-shadow:
+  0 0.7px 1px rgba(0, 0, 0, 0.011),
+  0 1.8px 2.5px rgba(0, 0, 0, 0.016),
+  0 3.4px 4.6px rgba(0, 0, 0, 0.02),
+  0 6px 8.3px rgba(0, 0, 0, 0.024),
+  0 11.3px 15.5px rgba(0, 0, 0, 0.04),
+  0 27px 37px rgba(0, 0, 0, 0.06);
+}
+
+.no-animate{
+    animation: none !important
+}
+
+
+/* anmation classes */
+
+.animate-line-one-fwd{
+    animation-name: animate-line-one;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+
+.animate-line-one-reverse{
+    animation-name: animate-line-one-rev;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-direction: normal;
+}
+
+.animate-line-two-fwd{
+    animation-name: animate-line-two;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+
+.animate-line-two-reverse{
+    animation-name: animate-line-two-rev;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-direction: normal;
+}
+
+.animate-line-three-fwd{
+    animation-name: animate-line-three;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+
+.animate-line-three-reverse{
+    animation-name: animate-line-three-rev;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+
+
+/* Animation Code */
+@keyframes animate-line-one{
+    0%  { transform: translateY(0)}
+    50% { transform: translateY(1.6em)}
+    100%{transform: translateY(1.6em) rotate(-45deg)}
+}
+@keyframes animate-line-one-rev{
+    0% {transform: translateY(1.6em)rotate(-45deg)}
+    50% {transform: translateY(1.6em)}
+    100% {transform: translateY(0em)};
+}
+
+@keyframes animate-line-three{
+    0%  { transform: translateY(0)}
+    50% { transform: translateY(-1.6em)}
+    100%{transform: translateY(-1.6em) rotate(45deg)}
+}
+
+@keyframes animate-line-three-rev{
+    0% {transform: translateY(-1.6em)rotate(45deg)}
+    50%{transform: translateY()}
+    100%{transform: translateY(0)}
+
+}
+
+@keyframes animate-line-two{
+    0% {transform: scaleX(100%)}
+    50% {transform: scaleX(0%)}
+    100% {transform: scaleX(0%)}
+}
+@keyframes animate-line-two-rev{
+    0% {transform: scaleX(0%)}
+    50% {tranform: scaleX(0%)}
+    100% {transform: scaleX(100%)}
+}
+

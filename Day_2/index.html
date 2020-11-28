@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            function superToggleRev(){
+                $("#line-one").toggleClass("animate-line-one-reverse animate-line-one-fwd")
+                $("#line-two").toggleClass("animate-line-two-reverse animate-line-two-fwd")
+                $("#line-three").toggleClass("animate-line-three-reverse animate-line-three-fwd")
+            };
+            function superRemove(){
+                $("#line-one").removeClass('no-animate');
+                $('#line-two').removeClass('no-animate');
+                $('#line-three').removeClass('no-animate');
+            }
+
+                $(".burger").click(function(){(
+                    superRemove())
+                    superToggleRev();
+            })
+
+        })
+    </script>
+    <title>Day 2: Animated Hamburger</title>
+</head>
+<body>
+    <!--ANimate the three line hamburger to make an X when clocked-->
+    <div class="main-container">
+        <div class="burger">
+            <div class="line-container">
+                <div class = 'line box animate-line-one-reverse no-animate' id="line-one"></div>
+                <div class = 'line box animate-line-two-reverse no-animate' id="line-two"></div>
+                <div class = 'line box animate-line-three-reverse no-animate' id="line-three"></div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
