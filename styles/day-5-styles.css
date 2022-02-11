@@ -1,0 +1,60 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body {
+  background: #4aa;
+}
+
+.chart {
+  width: 100%;
+}
+.chart__head {
+  background: #fc6;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.chart__head .left,
+.chart__head .right {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.chart .graph {
+  height: 300px;
+}
+.chart .graph__header {
+  height: 15%;
+}
+.chart .graph__body {
+  height: 70%;
+}
+.chart .graph__footer {
+  height: 15%;
+  display: flex;
+  justify-content: space-evenly;
+}/*# sourceMappingURL=day-5-styles.css.map */
