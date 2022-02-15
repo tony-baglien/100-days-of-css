@@ -63,15 +63,14 @@ body {
         position: relative;
 
         &::before {
-          content: '';
-          position:  absolute;
+          content: "";
+          position: absolute;
           left: 20px;
           top: calc(50% - 2.5px);
           height: 5px;
           width: 20px;
           background: #fa7373;
           border-radius: 5px;
-
         }
       }
       .purchases {
@@ -80,15 +79,14 @@ body {
         position: relative;
 
         &::before {
-          content: '';
-          position:  absolute;
+          content: "";
+          position: absolute;
           left: 20px;
           top: calc(50% - 2.5px);
           height: 5px;
           width: 20px;
           background: #7ba2ff;
           border-radius: 5px;
-
         }
       }
     }
@@ -122,12 +120,31 @@ body {
               stroke: #7ba2ff;
               stroke-width: 2;
               stroke-linecap: round;
+            }
           }
         }
+      }
+      .line {
+        &--red {
+          svg {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            right: 0;
+            bottom: 0px;
+
+            text-align: center;
+            polyline {
+              fill: none;
+              stroke: #fa7373;
+              stroke-width: 2;
+              stroke-linecap: round;
+            }
+          }
         }
       }
     }
-    
+
     &__footer {
       height: 15%;
       display: flex;

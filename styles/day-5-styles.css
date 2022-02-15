@@ -8,8 +8,7 @@
   margin-top: -200px;
   margin-left: -200px;
   border-radius: 2px;
-  -webkit-box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
-          box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
   overflow: hidden;
   background: #fff;
   color: #333;
@@ -22,8 +21,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 body {
@@ -33,52 +31,35 @@ body {
 .chart {
   width: 100%;
 }
-
 .chart__head {
   background: #fc6;
   height: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  align-items: center;
+  justify-content: space-around;
 }
-
 .chart__head .left,
 .chart__head .right {
   display: block;
   width: 100%;
   text-align: center;
 }
-
 .chart .graph {
   height: 300px;
 }
-
 .chart .graph__header {
   height: 15%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  align-items: center;
+  justify-content: end;
 }
-
 .chart .graph__header .views {
   padding: 0 10px;
   padding-left: 50px;
   position: relative;
 }
-
 .chart .graph__header .views::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 20px;
   top: calc(50% - 2.5px);
@@ -87,15 +68,13 @@ body {
   background: #fa7373;
   border-radius: 5px;
 }
-
 .chart .graph__header .purchases {
   padding: 0 10px;
   padding-left: 50px;
   position: relative;
 }
-
 .chart .graph__header .purchases::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 20px;
   top: calc(50% - 2.5px);
@@ -104,24 +83,13 @@ body {
   background: #7ba2ff;
   border-radius: 5px;
 }
-
 .chart .graph__body {
   height: 70%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
-
 .chart .graph__body .row {
   width: 90%;
   height: 2px;
@@ -129,7 +97,6 @@ body {
   background: rgba(238, 238, 238, 0.575);
   margin: 20px 0;
 }
-
 .chart .graph__body .line--blue svg {
   position: absolute;
   top: 50%;
@@ -138,21 +105,28 @@ body {
   bottom: 0px;
   text-align: center;
 }
-
 .chart .graph__body .line--blue svg polyline {
   fill: none;
   stroke: #7ba2ff;
   stroke-width: 2;
   stroke-linecap: round;
 }
-
+.chart .graph__body .line--red svg {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  right: 0;
+  bottom: 0px;
+  text-align: center;
+}
+.chart .graph__body .line--red svg polyline {
+  fill: none;
+  stroke: #fa7373;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
 .chart .graph__footer {
   height: 15%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-/*# sourceMappingURL=day-5-styles.css.map */
+  justify-content: space-evenly;
+}/*# sourceMappingURL=day-5-styles.css.map */
