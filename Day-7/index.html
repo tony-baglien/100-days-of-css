@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/day-7-styles.css">
+    <script src="https://kit.fontawesome.com/d8eb847672.js" crossorigin="anonymous"></script>
+    <title>Day 7</title>
+</head>
+<body>
+    <div class="frame">
+        <div class="center">
+              <div class="header">
+                  <div class="header__menu">
+                      <div class="dash dash--top"></div>
+                      <div class="dash dash--bottom"></div>
+                      <div class="circle"></div>
+                  </div>
+                  <div class="header__title">
+                      <h3>Notifications</h3>
+                  </div>
+                  <div class="header__search">
+                      <div class="circle circle--inner"></div>
+                      <div class="circle circle--outer"></div>
+                      <div class="search-bar reveal"></div>
+                  </div>
+              </div>
+        </div>
+      </div>
+</body>
+<script>
+    const searchBar = document.querySelector('.search-bar');
+    const searchBtn = document.querySelector('.circle--inner');
+
+    searchBtn.addEventListener('click',  () => {
+        searchBar.classList.toggle('reveal')
+    })
+
+</script>
+</html>

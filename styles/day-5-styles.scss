@@ -41,6 +41,9 @@ body {
     align-items: center;
     justify-content: space-around;
 
+    color: white;
+    font-weight: 500;
+
     .left,
     .right {
       display: block;
@@ -56,6 +59,7 @@ body {
       display: flex;
       align-items: center;
       justify-content: end;
+      
 
       .views {
         padding: 0 10px;
@@ -115,6 +119,7 @@ body {
             bottom: 0px;
 
             text-align: center;
+
             polyline {
               fill: none;
               stroke: #7ba2ff;
@@ -122,13 +127,45 @@ body {
               stroke-linecap: round;
             }
           }
+          .dot {
+            background-color: #7ba2ff;
+            &--1 {
+              top: 256px;
+              left: 47px;
+            }
+            &--2 {
+              top: 246px;
+              left: 86px; 
+            }
+            &--3 {
+              top: 261px;
+              left: 127px; 
+            }
+            &--4 {
+              top: 252px;
+              left: 167px; 
+            }
+            &--5 {
+              top: 258px;
+              left: 206px; 
+            }
+            &--6 {
+              top: 270px;
+              left: 246px; 
+            }
+            &--7 {
+              top: 260px;
+              left: 287px; 
+            }
+            .value {
+              background-color: #7ba2ff;
+            }
+          }
         }
-      }
-      .line {
         &--red {
           svg {
             position: absolute;
-            top: 50%;
+            top: 45%;
             left: 10%;
             right: 0;
             bottom: 0px;
@@ -141,6 +178,74 @@ body {
               stroke-linecap: round;
             }
           }
+          .dot {
+            background-color: #fa7373;
+            &--1 {
+              top: 222px;
+              left: 47px;
+            }
+            &--2 {
+              top: 188px;
+              left: 86px; 
+            }
+            &--3 {
+              top: 199px;
+              left: 127px; 
+            }
+            &--4 {
+              top: 188px;
+              left: 167px; 
+            }
+            &--5 {
+              top: 213px;
+              left: 206px; 
+            }
+            &--6 {
+              top: 223px;
+              left: 246px; 
+            }
+            &--7 {
+              top: 196px;
+              left: 287px; 
+            }
+            .value {
+              background-color: #fa7373;
+            }
+          }
+        }
+      }
+    }
+
+    .dot {
+      position: absolute;
+      height: 7px;
+      width: 7px;
+      background-color: black;
+      border-radius: 50%;
+      z-index: 10;
+
+     
+      .value {
+        font-size: 12px;
+        height: max-content;
+        width: max-content;
+        background-color: #fa7373;
+        color: white;
+        position: absolute;
+        top: -10px;
+        right: -19px;
+        opacity: 0;
+        transition: 0.5s;
+
+        border-radius: 5px;
+        padding: 3px 5px;
+        font-size: 12px;
+      }
+      &:hover {
+        cursor:pointer;
+        .value {
+          opacity: 1;
+          top: -25px;
         }
       }
     }
