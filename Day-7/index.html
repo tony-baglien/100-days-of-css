@@ -23,18 +23,35 @@
                   <div class="header__search">
                       <div class="circle circle--inner"></div>
                       <div class="circle circle--outer"></div>
-                      <div class="search-bar reveal"></div>
+                      <div class="search-bar"></div>
                   </div>
-              </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </div>
+    <div class="sub-nav">
+        <ul>
+            <li>Dashboard</li>
+            <li>Profile</li>
+            <li>Notifications</li>
+            <li>Messages</li>
+            <li>Settings</li>
+        </ul>
+    </div>
 </body>
 <script>
+    const menuBtn = document.querySelector('.header__menu');
+    const frame = document.querySelector('.frame');
+    const subNav = document.querySelector('.sub-nav')
     const searchBar = document.querySelector('.search-bar');
     const searchBtn = document.querySelector('.circle--inner');
 
     searchBtn.addEventListener('click',  () => {
         searchBar.classList.toggle('reveal')
+    })
+    menuBtn.addEventListener('click', () => {
+        frame.classList.toggle('show-nav')
+        subNav.classList.toggle('show-nav')
     })
 
 </script>
