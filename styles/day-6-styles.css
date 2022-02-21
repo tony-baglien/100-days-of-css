@@ -1,4 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+body {
+  background: -webkit-gradient(linear, left bottom, right top, from(#eebe6c), to(#ca7c4e));
+  background: linear-gradient(to right top, #eebe6c 0%, #ca7c4e 100%);
+  height: 100vh;
+  overflow: hidden;
+}
+
 .frame {
   position: absolute;
   top: 50%;
@@ -65,24 +72,6 @@
           align-items: center;
 }
 
-.leftSide .img-wrapper:hover .border--inner {
-  -webkit-animation: cwSpin;
-          animation: cwSpin;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-.leftSide .img-wrapper:hover .border--outer {
-  -webkit-animation: ccwSpin;
-          animation: ccwSpin;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
 .leftSide .img-wrapper .img-container {
   position: relative;
   display: -webkit-box;
@@ -94,6 +83,24 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.leftSide .img-wrapper .img-container:hover .border--inner {
+  -webkit-animation: cwSpin;
+          animation: cwSpin;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.leftSide .img-wrapper .img-container:hover .border--outer {
+  -webkit-animation: ccwSpin;
+          animation: ccwSpin;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .leftSide .img-wrapper .img-container img {
@@ -122,6 +129,24 @@
   width: 120px;
   top: -115px;
   border-right: 2px solid transparent;
+}
+
+.leftSide .btn-container .btn {
+  border: 1px solid brown;
+  padding: 7px 28px;
+  border-radius: 25px;
+  margin-bottom: 16px;
+  background: white;
+  font-size: 12px;
+  color: brown;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.leftSide .btn-container .btn:hover {
+  cursor: pointer;
+  color: white;
+  background: brown;
 }
 
 .rightSide {
